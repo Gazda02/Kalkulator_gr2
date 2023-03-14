@@ -1,0 +1,32 @@
+Terminy:
+
+14.03.2023 - Zebranie zespołu i ustalenie harmonogramu pracy.
+21.03.2023 - Utworzenie podstawowej funkcjonalności kalkulatora (dodawanie, odejmowanie, mnożenie, dzielenie).
+28.03.2023 - Dodanie funkcjonalności potęgowania oraz pierwiastkowania.
+04.04.2023 - Dodanie obsługi pamięci ostatnich 10 zadań oraz odwoływanie się do zapamiętanego zadania.
+11.04.2023 - Dodanie funkcjonalności czyszczenia pamięci.
+18.04.2023 - Dodanie obsługi liczb zespolonych.
+25.04.2023 - Testowanie i poprawki błędów.
+
+Funkcjonalności:
+
+Przeprowadzanie działań: dodawanie, odejmowanie, mnożenie, dzielenie, potęgowanie, pierwiastkowanie.
+Pamięć ostatnich 10 zadań.
+Odwołanie się do zapamiętanego zadania.
+Czyszczenie pamięci.
+Obsługa liczb zespolonych.
+Wymyślona funkcjonalność: obliczanie procentów.
+
+Podział zadań pomiedzy 4 osoby:
+
+Osoba 1: Podstawowa funkcjonalność kalkulatora (dodawanie, odejmowanie, mnożenie, dzielenie, potęgowanie oraz pierwiastkowanie).
+Osoba 2: Interfejs graficzny aplikacji.
+Osoba 3: Funkcjonalność pamięci ostatnich 10 zadań oraz odwoływanie się do zapamiętanego zadania oraz czyszczenie pamięci.
+Osoba 4: Obsługa liczb zespolonych oraz funkcjonalność obliczania procentów.
+
+Narzędzia:
+
+Język Python 3.
+Środowisko programistyczne PyCharm.
+Biblioteka NumPy do obsługi liczb zespolonych.
+GitHub do kontroli wersji i koordynacji pracy zespołu.
