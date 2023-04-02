@@ -45,7 +45,7 @@ previous = ['', '', '', '', '', '', '', '', '', '']
 
 
 
-# Piotr Grzyb:
+# Weronika Juszczyk:
 # lista przechowująca równania
 # wyświetlanie poprzenich równań po kolei
 
@@ -60,7 +60,7 @@ def press_equal():
         previous.insert(0, prev)
         if len(previous) > 11:
             previous.pop()
-        # print(previous)
+        print(previous)
         prev1.set(previous[0])
         prev2.set(previous[1])
         prev3.set(previous[2])
@@ -92,8 +92,6 @@ def previous_equasion(number):
 
 # Karol Gazda- Tymczasowe stałe
 
-#Jakub Gicala - Wstępne GUI
-
 # Ustawienie okna kalkulatora
 gui = Tk()
 gui.title('Kalkulator')
@@ -124,115 +122,123 @@ prev9 = StringVar()
 prev10 = StringVar()
 equasion.set('0')
 # Stworzenie pól przechowujących 10 poprzednich równań i głównego pola do wpisywania wyrażenia
-expression_field = Entry(button_frame, textvariable=equasion, justify='right', font=('arial', 20, 'bold',),
+expression_field = Entry(button_frame, textvariable=equasion, justify='right', font=('calibri', 20, 'bold',),
                          relief='ridge', borderwidth=5, bg='#0000CC')
-previous_expression_field_1 = Entry(button_frame, textvariable=prev1, justify='right', font=('arial', 20, 'bold'),
+previous_expression_field_1 = Entry(button_frame, textvariable=prev1, justify='right', font=('calibri', 20, 'bold'),
                                     relief='ridge', borderwidth=5, )
-previous_expression_field_2 = Entry(button_frame, textvariable=prev2, justify='right', font=('arial', 20, 'bold'),
+previous_expression_field_2 = Entry(button_frame, textvariable=prev2, justify='right', font=('calibri', 20, 'bold'),
                                     relief='ridge', borderwidth=5, )
-previous_expression_field_3 = Entry(button_frame, textvariable=prev3, justify='right', font=('arial', 20, 'bold'),
+previous_expression_field_3 = Entry(button_frame, textvariable=prev3, justify='right', font=('calibri', 20, 'bold'),
                                     relief='ridge', borderwidth=5, )
-previous_expression_field_4 = Entry(button_frame, textvariable=prev4, justify='right', font=('arial', 20, 'bold'),
+previous_expression_field_4 = Entry(button_frame, textvariable=prev4, justify='right', font=('calibri', 20, 'bold'),
                                     relief='ridge', borderwidth=5, )
-previous_expression_field_5 = Entry(button_frame, textvariable=prev5, justify='right', font=('arial', 20, 'bold'),
+previous_expression_field_5 = Entry(button_frame, textvariable=prev5, justify='right', font=('calibri', 20, 'bold'),
                                     relief='ridge', borderwidth=5, )
-previous_expression_field_6 = Entry(button_frame, textvariable=prev6, justify='right', font=('arial', 20, 'bold'),
+previous_expression_field_6 = Entry(button_frame, textvariable=prev6, justify='right', font=('calibri', 20, 'bold'),
                                     relief='ridge', borderwidth=5, )
-previous_expression_field_7 = Entry(button_frame, textvariable=prev7, justify='right', font=('arial', 20, 'bold'),
+previous_expression_field_7 = Entry(button_frame, textvariable=prev7, justify='right', font=('calibri', 20, 'bold'),
                                     relief='ridge', borderwidth=5, )
-previous_expression_field_8 = Entry(button_frame, textvariable=prev8, justify='right', font=('arial', 20, 'bold'),
+previous_expression_field_8 = Entry(button_frame, textvariable=prev8, justify='right', font=('calibri', 20, 'bold'),
                                     relief='ridge', borderwidth=5, )
-previous_expression_field_9 = Entry(button_frame, textvariable=prev9, justify='right', font=('arial', 20, 'bold'),
+previous_expression_field_9 = Entry(button_frame, textvariable=prev9, justify='right', font=('calibri', 20, 'bold'),
                                     relief='ridge', borderwidth=5, )
-previous_expression_field_10 = Entry(button_frame, textvariable=prev10, justify='right', font=('arial', 20, 'bold'),
+previous_expression_field_10 = Entry(button_frame, textvariable=prev10, justify='right', font=('calibri', 20, 'bold'),
                                      relief='ridge', borderwidth=5, )
 # Stworzenie wszystkich przycisków- Weronika Juszczyk
 # Poprawienie funkcji ln oraz sqrt- Piotr Grzyb
 # Przypianie funkcjonalności przyciską previous- Piotr Grzyb
-imaginary_unit_button = Button(button_frame, text='i', font=('arial', 20), relief='ridge', borderwidth=5, bg='#0000CC',
+imaginary_unit_button = Button(button_frame, text='i', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC',
                                width=4, height=1, command=lambda: press('j'))
-decimal_point_button = Button(button_frame, text='.', font=('arial', 20), relief='ridge', borderwidth=5, bg='#0000CC',
+decimal_point_button = Button(button_frame, text='.', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC',
                               width=4, height=1, command=lambda: press('.'))
-button_0 = Button(button_frame, text='0', font=('arial', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
+button_0 = Button(button_frame, text='0', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
                   height=1, command=lambda: press(0))
-button_1 = Button(button_frame, text='1', font=('arial', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
+button_1 = Button(button_frame, text='1', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
                   height=1, command=lambda: press(1))
-button_2 = Button(button_frame, text='2', font=('arial', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
+button_2 = Button(button_frame, text='2', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
                   height=1, command=lambda: press(2))
-button_3 = Button(button_frame, text='3', font=('arial', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
+button_3 = Button(button_frame, text='3', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
                   height=1, command=lambda: press(3))
-button_4 = Button(button_frame, text='4', font=('arial', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
+button_4 = Button(button_frame, text='4', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
                   height=1, command=lambda: press(4))
-button_5 = Button(button_frame, text='5', font=('arial', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
+button_5 = Button(button_frame, text='5', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
                   height=1, command=lambda: press(5))
-button_6 = Button(button_frame, text='6', font=('arial', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
+button_6 = Button(button_frame, text='6', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
                   height=1, command=lambda: press(6))
-button_7 = Button(button_frame, text='7', font=('arial', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
+button_7 = Button(button_frame, text='7', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
                   height=1, command=lambda: press(7))
-button_8 = Button(button_frame, text='8', font=('arial', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
+button_8 = Button(button_frame, text='8', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
                   height=1, command=lambda: press(8))
-button_9 = Button(button_frame, text='9', font=('arial', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
+button_9 = Button(button_frame, text='9', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
                   height=1, command=lambda: press(9))
-addition_button = Button(button_frame, text='+', font=('arial', 20), relief='ridge', borderwidth=5, bg='#0000CC',
+addition_button = Button(button_frame, text='+', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC',
                          width=4, height=1, command=lambda: press('+'))
-substraction_button = Button(button_frame, text='-', font=('arial', 20), relief='ridge', borderwidth=5, bg='#0000CC',
+substraction_button = Button(button_frame, text='-', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC',
                              width=4, height=1, command=lambda: press('-'))
-multiplication_button = Button(button_frame, text='*', font=('arial', 20), relief='ridge', borderwidth=5, bg='#0000CC',
+multiplication_button = Button(button_frame, text='*', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC',
                                width=4, height=1, command=lambda: press('*'))
-division_button = Button(button_frame, text='/', font=('arial', 20), relief='ridge', borderwidth=5, bg='#0000CC',
+division_button = Button(button_frame, text='/', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC',
                          width=4, height=1, command=lambda: press('/'))
-power_button = Button(button_frame, text='^', font=('arial', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
+power_button = Button(button_frame, text='^', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
                       height=1, command=lambda: press('**'))
-button_r_bracket = Button(button_frame, text='(', font=('arial', 20), relief='ridge', borderwidth=5, bg='#0000CC',
+button_r_bracket = Button(button_frame, text='(', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC',
                           width=4,
                           height=1, command=lambda: press('('))
-button_l_bracket = Button(button_frame, text=')', font=('arial', 20), relief='ridge', borderwidth=5, bg='#0000CC',
+button_l_bracket = Button(button_frame, text=')', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC',
                           width=4,
                           height=1, command=lambda: press(')'))
-button_ln = Button(button_frame, text='ln', font=('arial', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
+button_ln = Button(button_frame, text='ln', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
                    height=1, command=lambda: press('ln('))
-square_root_button = Button(button_frame, text='sqrt', font=('arial', 20), relief='ridge', borderwidth=5, bg='#0000CC',
+square_root_button = Button(button_frame, text='sqrt', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC',
                             width=4, height=1, command=lambda: press('sqrt('))
-clear_button = Button(button_frame, text='C', font=('arial', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
+clear_button = Button(button_frame, text='C', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
                       height=1, command=clear)
-equal_button = Button(button_frame, text='=', font=('arial', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
+equal_button = Button(button_frame, text='=', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
                       height=1, command=press_equal)
-clear_previous_button = Button(button_frame, text='P', font=('arial', 20), relief='ridge', borderwidth=5, bg='#0000CC',
+clear_previous_button = Button(button_frame, text='P', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC',
                                width=4,
                                height=1, command=clear_previous)
-previous_expression_button_1 = Button(button_frame, text='->', font=('arial', 20), relief='ridge', borderwidth=5,
+#ten przycisk do 5 potęgi Karol Gazda
+pow5 = Button(button_frame, text='x^5', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
+              height=1, command=lambda: press('**5'))
+previous_expression_button_1 = Button(button_frame, text='->', font=('calibri', 20), relief='ridge', borderwidth=5,
                                       bg='#0000CC', width=4,
                                       height=1, command=lambda: previous_equasion(1))
-previous_expression_button_2 = Button(button_frame, text='->', font=('arial', 20), relief='ridge', borderwidth=5,
+previous_expression_button_2 = Button(button_frame, text='->', font=('calibri', 20), relief='ridge', borderwidth=5,
                                       bg='#0000CC', width=4,
                                       height=1, command=lambda: previous_equasion(2))
-previous_expression_button_3 = Button(button_frame, text='->', font=('arial', 20), relief='ridge', borderwidth=5,
+previous_expression_button_3 = Button(button_frame, text='->', font=('calibri', 20), relief='ridge', borderwidth=5,
                                       bg='#0000CC', width=4,
                                       height=1, command=lambda: previous_equasion(3))
-previous_expression_button_4 = Button(button_frame, text='->', font=('arial', 20), relief='ridge', borderwidth=5,
+previous_expression_button_4 = Button(button_frame, text='->', font=('calibri', 20), relief='ridge', borderwidth=5,
                                       bg='#0000CC', width=4,
                                       height=1, command=lambda: previous_equasion(4))
-previous_expression_button_5 = Button(button_frame, text='->', font=('arial', 20), relief='ridge', borderwidth=5,
+previous_expression_button_5 = Button(button_frame, text='->', font=('calibri', 20), relief='ridge', borderwidth=5,
                                       bg='#0000CC', width=4,
                                       height=1, command=lambda: previous_equasion(5))
-previous_expression_button_6 = Button(button_frame, text='->', font=('arial', 20), relief='ridge', borderwidth=5,
+previous_expression_button_6 = Button(button_frame, text='->', font=('calibri', 20), relief='ridge', borderwidth=5,
                                       bg='#0000CC', width=4,
                                       height=1, command=lambda: previous_equasion(6))
-previous_expression_button_7 = Button(button_frame, text='->', font=('arial', 20), relief='ridge', borderwidth=5,
+previous_expression_button_7 = Button(button_frame, text='->', font=('calibri', 20), relief='ridge', borderwidth=5,
                                       bg='#0000CC', width=4,
                                       height=1, command=lambda: previous_equasion(7))
-previous_expression_button_8 = Button(button_frame, text='->', font=('arial', 20), relief='ridge', borderwidth=5,
+previous_expression_button_8 = Button(button_frame, text='->', font=('calibri', 20), relief='ridge', borderwidth=5,
                                       bg='#0000CC', width=4,
                                       height=1, command=lambda: previous_equasion(8))
-previous_expression_button_9 = Button(button_frame, text='->', font=('arial', 20), relief='ridge', borderwidth=5,
+previous_expression_button_9 = Button(button_frame, text='->', font=('calibri', 20), relief='ridge', borderwidth=5,
                                       bg='#0000CC', width=4,
                                       height=1, command=lambda: previous_equasion(9))
-previous_expression_button_10 = Button(button_frame, text='->', font=('arial', 20), relief='ridge', borderwidth=5,
+previous_expression_button_10 = Button(button_frame, text='->', font=('calibri', 20), relief='ridge', borderwidth=5,
                                        bg='#0000CC', width=4,
                                        height=1, command=lambda: previous_equasion(10))
 # Tutaj rozmieszczam przyciski oraz pola- Jakub Gicala
 # Zmiana pozycji previous_expression_button oraz previous_expression_field w celu zwiekszenia czytelności kalkulatora- Weronika Juszczyk
-expression_field.grid(row=0, column=0, columnspan=6, ipadx=84, ipady=9, pady=0)
+
+
+expression_field.grid(row=0, column=0, columnspan=5, ipadx=84, ipady=9, pady=0)
+
+#umieszczenie przycisku Karol Gazda
+pow5.grid(row=3, column=4)
 button_1.grid(row=1, column=0)
 button_2.grid(row=1, column=1)
 button_3.grid(row=1, column=2)
@@ -247,7 +253,7 @@ button_7.grid(row=3, column=0)
 button_8.grid(row=3, column=1)
 button_9.grid(row=3, column=2)
 multiplication_button.grid(row=3, column=3)
-clear_button.grid(row=3, column=4)
+clear_button.grid(row=0, column=5)
 button_0.grid(row=4, column=0)
 imaginary_unit_button.grid(row=4, column=1)
 decimal_point_button.grid(row=4, column=2)
@@ -281,3 +287,4 @@ previous_expression_field_10.grid(row=4, column=14, columnspan=5, ipadx=4, ipady
 
 # Uruchomienie kalkulatora
 gui.mainloop()
+
