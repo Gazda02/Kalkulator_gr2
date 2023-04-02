@@ -234,7 +234,6 @@ previous_expression_button_10 = Button(button_frame, text='->', font=('calibri',
 # Tutaj rozmieszczam przyciski oraz pola- Jakub Gicala
 # Zmiana pozycji previous_expression_button oraz previous_expression_field w celu zwiekszenia czytelności kalkulatora- Weronika Juszczyk
 
-
 expression_field.grid(row=0, column=0, columnspan=5, ipadx=84, ipady=9, pady=0)
 
 #umieszczenie przycisku Karol Gazda
