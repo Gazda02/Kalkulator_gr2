@@ -219,7 +219,7 @@ previous_expression_button_5 = Button(button_frame, text='->', font=('calibri', 
 previous_expression_button_6 = Button(button_frame, text='->', font=('calibri', 20), relief='ridge', borderwidth=5,
                                       bg='#0000CC', width=4,
                                       height=1, command=lambda: previous_equasion(6))
-previous_expression_button_7 = Button(button_frame, text='->', font=('calibri', 20), relief='ridge', borderwidth=5,
+previous_expression_button_7 = Button(button_frame, text='->',font=('calibri', 20), relief='ridge', borderwidth=5,
                                       bg='#0000CC', width=4,
                                       height=1, command=lambda: previous_equasion(7))
 previous_expression_button_8 = Button(button_frame, text='->', font=('calibri', 20), relief='ridge', borderwidth=5,
