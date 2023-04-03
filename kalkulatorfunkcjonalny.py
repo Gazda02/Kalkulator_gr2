@@ -4,9 +4,9 @@ from tkinter import *
 from math import *
 
 
-# Karol Gazda - Tymczasowe funkcje
+#Tymczasowe funkcje
 
-# Weronika Juszczyk:
+
 expression = ""  # zmienna przechowująca równanie
 
 
@@ -23,8 +23,6 @@ def clear():
     expression = ""
     equasion.set('0')
 
-
-# Jakub Gicala
 # funkcja czyszcząca pamięć
 def clear_previous():
     global previous
@@ -45,7 +43,6 @@ previous = ['', '', '', '', '', '', '', '', '', '']
 
 
 
-# Weronika Juszczyk:
 # lista przechowująca równania
 # wyświetlanie poprzenich równań po kolei
 
@@ -59,7 +56,7 @@ def press_equal():
         expression = str(total)
         previous.insert(0, prev)
         if len(previous) > 11:
-            previous.pop()
+            previous.pop() #usunięcie z listy przechowywanych równań ostatniego z nichn po zapełnainu 10 miejsc w pamięci
         print(previous)
         prev1.set(previous[0])
         prev2.set(previous[1])
@@ -72,10 +69,10 @@ def press_equal():
         prev9.set(previous[8])
         prev10.set(previous[9])
     except:
-        equasion.set("Błąd")
+        equasion.set("Błąd")# w przypadku uzyskania błędu wynik nie będzie przechowywany
         expression = ""
 
-# wywoływanie wyników z historii Piotr Grzyb
+# wywoływanie wyników z histori
 
 def previous_equasion(number):
     global expression, previous
@@ -90,7 +87,7 @@ def previous_equasion(number):
 
 
 
-# Karol Gazda- Tymczasowe stałe
+#Tymczasowe stałe
 
 # Ustawienie okna kalkulatora
 gui = Tk()
@@ -108,8 +105,9 @@ button_frame.pack()
 # Zdefiniowanie zmiennej equasion klasy StringVar przechowującej wpisywane wyrażenie
 equasion = StringVar()
 
-# Piotr Grzyb- zdefiniowanie zmiennych klasy StringVar
-# prev1-prev10 przechowyjących wpisywane, poprzednie wyrażenia)
+#Zdefiniowanie zmiennych klasy StringVar
+# prev1-prev10 przechowyjących wpisywane, poprzednie wyrażenia
+
 prev1 = StringVar()
 prev2 = StringVar()
 prev3 = StringVar()
@@ -121,9 +119,11 @@ prev8 = StringVar()
 prev9 = StringVar()
 prev10 = StringVar()
 equasion.set('0')
-# Utworzenie pól przechowujących 10 poprzednich równań i głównego pola do wpisywania wyrażenia
-expression_field = Entry(button_frame, textvariable=equasion, justify='right', font=('calibri', 20, 'bold',),
-                         relief='ridge', borderwidth=5, bg='#0000CC')
+
+# Utworzenie pól przechowujących 10 poprzednich równań i głównego pola do wpisywania wyrażenia, przypisanie wyglądu wyświatlanego przez nie tekstu
+#pola przechowujące poprzednie równania
+expression_field = Entry(button_frame, textvariable=equasion, justify='right', font=('calibri', 20, 'bold',),  
+                         relief='ridge', borderwidth=5, bg='#0000CC')   #pole do wpisywania wyrażenia
 previous_expression_field_1 = Entry(button_frame, textvariable=prev1, justify='right', font=('calibri', 20, 'bold'),
                                     relief='ridge', borderwidth=5, )
 previous_expression_field_2 = Entry(button_frame, textvariable=prev2, justify='right', font=('calibri', 20, 'bold'),
@@ -143,14 +143,18 @@ previous_expression_field_8 = Entry(button_frame, textvariable=prev8, justify='r
 previous_expression_field_9 = Entry(button_frame, textvariable=prev9, justify='right', font=('calibri', 20, 'bold'),
                                     relief='ridge', borderwidth=5, )
 previous_expression_field_10 = Entry(button_frame, textvariable=prev10, justify='right', font=('calibri', 20, 'bold'),
-                                     relief='ridge', borderwidth=5, )
-# Stworzenie wszystkich przycisków- Weronika Juszczyk
-# Poprawienie funkcji ln oraz sqrt- Piotr Grzyb
-# Przypianie funkcjonalności przyciską previous- Piotr Grzyb
+                                     relief='ridge', borderwidth=5, )  
+
+# Stworzenie przycisków
+
+# Przypianie funkcjonalności przyciskom "previous"
+#przycisk do liczb zespolonych
 imaginary_unit_button = Button(button_frame, text='i', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC',
                                width=4, height=1, command=lambda: press('j'))
+#przycisk do liczb po przecinku
 decimal_point_button = Button(button_frame, text='.', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC',
                               width=4, height=1, command=lambda: press('.'))
+#przyciski do wprowadzania cyfr
 button_0 = Button(button_frame, text='0', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
                   height=1, command=lambda: press(0))
 button_1 = Button(button_frame, text='1', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
@@ -171,6 +175,7 @@ button_8 = Button(button_frame, text='8', font=('calibri', 20), relief='ridge', 
                   height=1, command=lambda: press(8))
 button_9 = Button(button_frame, text='9', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
                   height=1, command=lambda: press(9))
+#przyciski działań
 addition_button = Button(button_frame, text='+', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC',
                          width=4, height=1, command=lambda: press('+'))
 substraction_button = Button(button_frame, text='-', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC',
@@ -198,7 +203,7 @@ equal_button = Button(button_frame, text='=', font=('calibri', 20), relief='ridg
 clear_previous_button = Button(button_frame, text='P', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC',
                                width=4,
                                height=1, command=clear_previous)
-#ten przycisk do 5 potęgi Karol Gazda
+#oprawa wizualna przycisków: do piatej potęgi oraz przechowujących poprzenie równania
 pow5 = Button(button_frame, text='x^5', font=('calibri', 20), relief='ridge', borderwidth=5, bg='#0000CC', width=4,
               height=1, command=lambda: press('**5'))
 previous_expression_button_1 = Button(button_frame, text='->', font=('calibri', 20), relief='ridge', borderwidth=5,
@@ -231,12 +236,12 @@ previous_expression_button_9 = Button(button_frame, text='->', font=('calibri', 
 previous_expression_button_10 = Button(button_frame, text='->', font=('calibri', 20), relief='ridge', borderwidth=5,
                                        bg='#0000CC', width=4,
                                        height=1, command=lambda: previous_equasion(10))
-# Tutaj rozmieszczam przyciski oraz pola- Jakub Gicala
-# Zmiana pozycji previous_expression_button oraz previous_expression_field w celu zwiekszenia czytelności kalkulatora- Weronika Juszczyk
+
+# Zmiana pozycji previous_expression_button oraz previous_expression_field w celu zwiekszenia czytelności kalkulatora
 
 expression_field.grid(row=0, column=0, columnspan=5, ipadx=84, ipady=9, pady=0)
 
-#umieszczenie przycisku Karol Gazda
+#Rozmieszczenie przycisków oraz pól na kalkulatorze
 pow5.grid(row=3, column=4)
 button_1.grid(row=1, column=0)
 button_2.grid(row=1, column=1)
