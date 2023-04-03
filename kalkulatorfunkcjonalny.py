@@ -121,7 +121,7 @@ prev8 = StringVar()
 prev9 = StringVar()
 prev10 = StringVar()
 equasion.set('0')
-# Stworzenie pól przechowujących 10 poprzednich równań i głównego pola do wpisywania wyrażenia
+# Utworzenie pól przechowujących 10 poprzednich równań i głównego pola do wpisywania wyrażenia
 expression_field = Entry(button_frame, textvariable=equasion, justify='right', font=('calibri', 20, 'bold',),
                          relief='ridge', borderwidth=5, bg='#0000CC')
 previous_expression_field_1 = Entry(button_frame, textvariable=prev1, justify='right', font=('calibri', 20, 'bold'),
